@@ -1,0 +1,27 @@
+server:
+    port: 8901
+        
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-1.csi4cghcum78.ap-south-1.rds.amazonaws.com:3306/sys
+    username: root
+    password: rootroot
+cors:
+    allowed-origins: "*"
+    allowed-methods: GET, POST, PUT, DELETE,UPDATE, OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+food:
+  app:
+    jwtSecret : foodSecretKey
+    jwtExpirationMs : 60480000
+      
+spring.application.name : auth-service
+       
+debug: true
